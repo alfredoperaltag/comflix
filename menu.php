@@ -1,5 +1,5 @@
 <?php session_start();
-  include('conexion.php');
+include('conexion.php');
   // include('seleccionador_categorias.php');
 ?>
 <!DOCTYPE html>
@@ -66,7 +66,7 @@
         </div>
       </div>
     </nav>
-  </header>
+</header>
 
   <main>
     <div class="container mt-5">
@@ -75,10 +75,10 @@
           <div class="card-columns">
             <?php
               // include 'seleccionador_categorias.php';
-              require "conexion.php";
-              $result=mysqli_query($conn,"SELECT Archivos.idArchivos,archivos.poster,archivos.nombre,categorias.nombreCategoria FROM archivos inner join categorias on archivos.idcategoria = categorias.idCategoria");
-              while($extraido = mysqli_fetch_array($result)){
-            ?>
+            require "conexion.php";
+            $consulta = mysqli_query($conn, "SELECT Archivos.idArchivos,archivos.poster,archivos.nombre,categorias.nombreCategoria FROM archivos inner join categorias on archivos.idcategoria = categorias.idCategoria");
+            while ($extraido = mysqli_fetch_array($consulta)) {
+              ?>
             <div class="card border-danger ">
               <a href="php/reproductor.php?nombre=<?php echo $extraido['nombre']; ?>">
                 <img src="<?php echo $extraido['poster']; ?>" class="card-img-top img-fluid tarjeta" style="height: 150px;">
@@ -89,17 +89,15 @@
               </div>
             </div>
             <?php
-              }
-            ?>
+
+          }
+          ?>
           </div>
         </div>
       </div>
     </div>
     <!-- </div> -->
   </main>
-
-  <footer>
-  </footer>
 
   <!-- Jquery -->
   <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
