@@ -21,8 +21,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#it-menu" aria-controls="it-menu" aria-expanded="false" aria-label="Menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="menu.php" class="logo">
-          <img src="img/logo2.svg" style="width: 150px; height: 40px;">
+        <a href="../menu.php" class="logo">
+          <img src="../img/logo2.svg" style="width: 150px; height: 40px;">
         </a>
         <!-- <a href="#" class="navbar-brand">Comflix</a> -->
         <div class="collapse navbar-collapse" id="it-menu">
@@ -44,9 +44,6 @@
                 <a href="principal.php?categoria=Suspenso" class="dropdown-item">Suspenso</a>
                 <a href="principal.php?categoria=Misterio" class="dropdown-item">Misterio</a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contacto</a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="usuario-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expand="false">
