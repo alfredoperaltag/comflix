@@ -2,12 +2,12 @@
 include "conexion.php";
 $idArchivos = $_GET['idArchivos'];
 $consulta = mysqli_query($conexion, "SELECT * FROM archivos WHERE idArchivos = '$idArchivos'")
-  or die("problemas en consultas: " . mysqli_error($conexion));
+    or die("problemas en consultas: " . mysqli_error($conexion));
 while ($registro = mysqli_fetch_array($consulta)) {
-  $nombre = $registro['nombre'];
-  $ruta = $registro['ruta'];
-  $descripcion = $registro['descripcion'];
-  $poster = $registro['poster'];
+    $nombre = $registro['nombre'];
+    $ruta = $registro['ruta'];
+    $descripcion = $registro['descripcion'];
+    $poster = $registro['poster'];
 }
 ?>
 
@@ -29,13 +29,12 @@ while ($registro = mysqli_fetch_array($consulta)) {
 require "barraNavegacion.php";
 ?>
 
-    <div class="container mt-5">
+    <div class="container">
 
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-10 col-xs-12">
-                <video-js id="my-video" class="video-js vjs-fluid vjs-big-play-centered vjs-default-skin" autoplay controls preload="auto" poster="../<?php echo $poster; ?>" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
-                    <source src="<?php echo $ruta; ?>" type='video/mp4'>
-                    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+                <video-js id="my-video" class="video-js vjs-fluid vjs-big-play-centered vjs-default-skin" autoplay controls preload="auto" poster="<?php echo $poster; ?>" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+                    <source src="<?php echo $ruta; ?>" type='video/mp4'>                    
                     <p class="vjs-no-js">
                     Para ver este video, active JavaScript y considere actualizar a un navegador web que
                         <a href="https://videojs.com/html5-video-support/" target="_blank">soporta video HTML5</a>
@@ -57,19 +56,10 @@ require "barraNavegacion.php";
                 </article>
             </div>
         </div>
-
-
     </div>
-
-
 
     <script src="js/video.min.js"></script>    
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script>
-    var vid = document.getElementById('my-video');
-    var player = videojs(vid, {controlBar: {volumePanel: {inline: false}}});
-    </script> -->
-
 </body>
 </html>
