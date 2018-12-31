@@ -33,7 +33,7 @@
                                 <?php echo $_SESSION['usuario']; ?></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="usuario-categorias">
-                            <a href="php/cerrarSesion.php" class="dropdown-item">Cerrar Sesión</a>
+                            <a href="cerrarSesion.php" class="dropdown-item">Cerrar Sesión</a>
                         </div>
                     </li>
                 </ul>

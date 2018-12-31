@@ -18,12 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($resultado == true) {
         $info .= 'Se enviara un correo de recuperacion.<br>';
-        mail($email,"Restablecer Contraseña de Comflix","Puedes restablecer tu contraseña en el sigiente enlace \n\n http://comflix.test/reset.php");
-    }else{
+        mail($email, "Restablecer Contraseña de Comflix", "Puedes restablecer tu contraseña en el sigiente enlace \n\n http://comflix.test/reset.php");
+    } else {
         $errores .= 'Correo incorrecto.<br>';
     }
     // var_dump($resultado);
 
 }
 
-require '../forgot.php';
+require 'restablecerContrasena.php';

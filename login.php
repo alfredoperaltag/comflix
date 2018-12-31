@@ -15,7 +15,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 						<div class="row justify-content-center">
-								<a href="/">
+								<a href="index.html">
 							<img src="img/logo2.svg" alt="logo" style="width: 400px; height: 110px;">
 								</a>
 						</div>
@@ -33,7 +33,7 @@
 
 								<div class="form-group">
 									<label for="password">Contraseña
-										<a href="resetpassword.php" class="float-right">
+										<a href="restablecerContrasena.php" class="float-right">
 											Olvido la Contraseña?
 										</a>
 									</label>

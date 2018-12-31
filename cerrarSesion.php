@@ -3,6 +3,6 @@
 session_destroy();
 $_SESSION = array();
 
-header('Location: logeo.php');
+header('Location: login.php');
 
 ?>
