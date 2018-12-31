@@ -1,13 +1,13 @@
 <?php session_start();
 
-if(isset($_SESSION['nombreUsuario'])){
+if (isset($_SESSION['nombreUsuario'])) {
     header('Location: ../menu.html');
 }
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $usuario = filter_var(strtolower($_POST['nombreUsuario']),FILTER_SANITIZE_STRING);
-    $apePaterno = filter_var(strtolower($_POST['apellidoPaterno']),FILTER_SANITIZE_STRING);
-    $apeMaterno = filter_var(strtolower($_POST['apellidoMaterno']),FILTER_SANITIZE_STRING);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $usuario = filter_var(strtolower($_POST['nombreUsuario']), FILTER_SANITIZE_STRING);
+    $apePaterno = filter_var(strtolower($_POST['apellidoPaterno']), FILTER_SANITIZE_STRING);
+    $apeMaterno = filter_var(strtolower($_POST['apellidoMaterno']), FILTER_SANITIZE_STRING);
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
@@ -51,6 +51,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 
-require '../register.php';
+require 'register.php';
 
 ?>
