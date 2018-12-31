@@ -1,7 +1,7 @@
 <?php session_start();
 
 if (isset($_SESSION['nombreUsuario'])) {
-    header('Location: ../menu.html');
+    header('Location: menu.html');
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -46,11 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($errores == '') {
         $sql = $conexion->prepare('INSERT INTO usuarios (idUsuario, nombreUsuario, apellidoPaterno, apellidoMaterno, correo, contraseña) VALUES (null, :usuario, :aPaterno, :aMaterno, :correo, :pass)');
         $sql->execute(array(':usuario' => $usuario, 'aPaterno' => $apePaterno, 'aMaterno' => $apeMaterno, ':correo' => $email, ':pass' => $password));
-        header('Location: logeo.php');
+        header('Location: login.php');
     }
 
 }
-
-require 'register.php';
+require 'registrar.php';
 
 ?>

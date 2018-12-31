@@ -14,14 +14,14 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 						<div class="row justify-content-center">
-								<a href="/">
+								<a href="index.html">
 							<img src="img/logo2.svg" alt="logo" style="width: 400px; height: 110px;">
 								</a>
 						</div>
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Registro</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<form method="POST" action="consultaRegistrar.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="nombreUsuario">Nombre</label>
 									<input id="nombreUsuario" type="text" class="form-control" name="nombreUsuario" required autofocus>
@@ -69,8 +69,7 @@
 									</div>
 								</div>
 
-								<?php if (!empty($errores)) : ?>
-								
+								<?php if (!empty($errores)) : ?>								
 								<div class="alert alert-dismissible alert-danger">
 									<button type="button" class="close" data-dismiss="alert">&times;</button>
 									<?php echo $errores; ?>
@@ -80,22 +79,20 @@
 								<div class="form-group">
 									<div class="custom-checkbox custom-control">
 										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
-										<label for="agree" class="custom-control-label">Estoy de acuerdo con los <a href="../terminos_y_condiciones.html">Terminos y Condiciones</a></label>
+										<label for="agree" class="custom-control-label">Estoy de acuerdo con los <a href="terminos_y_condiciones.html">Terminos y Condiciones</a></label>
 										<div class="invalid-feedback">
 											Necesitas aceptar los Terminos y Condiciones
 										</div>
 									</div>
 								</div>
 
-								<div class="form-group m-0">
-									<!-- <button type="submit" onclick="location.href='menu.html'" class="btn btn-primary btn-block"> -->
-									<!-- <button  onclick="location.href='../menu.html'" class="btn btn-primary btn-block"> -->
+								<div class="form-group m-0">									
 									<button  type="submit" class="btn btn-danger btn-block">
 										Registrarme
 									</button>
 								</div>
 								<div class="mt-4 text-center">
-									Ya tienes una cuenta?  <a href="logeo.php"> Login</a>
+									Ya tienes una cuenta?  <a href="login.php"> Login</a>
 								</div>
 							</form>
 						</div>

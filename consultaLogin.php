@@ -1,6 +1,6 @@
 <?php session_start();
 if (isset($_SESSION['nombreUsuario'])) {
-    header('Location: ../menu.html');
+    header('Location: menu.html');
 }
 
 $errores = '';
@@ -21,15 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $res = $statement->fetch();
 
-    // var_dump($res);
-
     if ($res != false) {
         $_SESSION['usuario'] = $usuario;
-        header('Location: ../menu.php');
+        header('Location: menu.php');
     } else {
         $errores .= '¡Usuario o contraseña incorracta!';
     }
 
 }
 
-require '../login.php';
+require 'login.php';
