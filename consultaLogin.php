@@ -1,9 +1,11 @@
 <?php 
-
-/* session_start();
+/* require "funciones.php";
+$obj = new funciones;
+$obj->verificarSesion(); */
+session_start();
 if (isset($_SESSION['nombreUsuario'])) {
-    header('Location: login.php');
-} */
+    header('Location: menu.php');
+}
 
 $errores = '';
 
@@ -21,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $statement = $conexion->prepare('SELECT * FROM usuarios WHERE nombreUsuario = :user AND contraseña = :pass');
     $statement->execute(array(':user' => $usuario, ':pass' => $password));
 
-   /*  $res = $statement->fetch(); */
+    $res = $statement->fetch();
 
-    if ($statement->fetch()) {
+    if ($res != false) {
         $_SESSION['usuario'] = $usuario;
         header('Location: menu.php');
     } else {

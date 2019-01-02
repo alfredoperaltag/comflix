@@ -1,4 +1,7 @@
-<?php session_start();
+<?php
+require "funciones.php";
+$obj = new funciones;
+$obj->verificarSesion();
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

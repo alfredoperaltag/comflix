@@ -1,4 +1,7 @@
-<?php session_start();
+<?php 
+require "funciones.php";
+$obj = new funciones;
+$obj->verificarSesion();
 include "conexion.php";
 $idArchivos = $_GET['idArchivos'];
 $consulta = mysqli_query($conexion, "SELECT * FROM archivos WHERE idArchivos = '$idArchivos'")
